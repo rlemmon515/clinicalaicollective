@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Newsletter | Clinical AI Collective</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:        #0D2340;
+  --navy-mid:    #1A3A5C;
+  --teal:        #0A7A6A;
+  --teal-light:  #14A896;
+  --teal-pale:   #E0F5F2;
+  --gold:        #C9922A;
+  --gold-light:  #F0D9A8;
+  --gold-pale:   #FDF6E8;
+  --ink:         #1A1A1A;
+  --soft:        #4A4A4A;
+  --ghost:       #888888;
+  --rule:        #DDDDDD;
+  --bg:          #F8F7F4;
+  --white:       #FFFFFF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Epilogue', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spacing: -0.2px; }
+.eyebrow {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  display: block;
+  margin-bottom: 12px;
+}
+.eyebrow-light { color: var(--teal-light); }
+.eyebrow-gold { color: var(--gold-light); opacity: 0.85; }
+
+/* ─── NAV ─── */
+.nav { background: var(--navy); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.nav-inner { max-width: 1140px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
+.nav-brand { display: flex; flex-direction: column; gap: 1px; text-decoration: none; }
+.nav-brand-name { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: #F0ECE3; letter-spacing: -0.2px; line-height: 1; }
+.nav-brand-tag { font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-light); opacity: 0.8; }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { font-size: 12px; font-weight: 500; color: rgba(240,236,227,0.55); text-decoration: none; letter-spacing: 0.03em; transition: color 0.15s; }
+.nav-links a:hover { color: #F0ECE3; }
+
+/* ─── HERO ─── */
+.newsletter-hero {
+  background: var(--navy);
+  padding: 80px 0 0;
+  overflow: hidden;
+}
+.hero-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 72px;
+  align-items: end;
+}
+.hero-left { padding-bottom: 72px; }
+.free-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(201,146,42,0.1);
+  border: 1px solid rgba(201,146,42,0.25);
+  border-radius: 20px;
+  padding: 4px 14px;
+  margin-bottom: 20px;
+}
+.free-badge-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.free-badge-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero-left h1 {
+  font-size: clamp(30px, 4vw, 50px);
+  font-weight: 700;
+  color: #F0ECE3;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+.hero-left h1 em { font-style: italic; color: #8DD8CC; }
+.hero-sub {
+  font-size: 16px;
+  color: rgba(240,236,227,0.62);
+  line-height: 1.75;
+  max-width: 460px;
+  margin-bottom: 32px;
+}
+.newsletter-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.newsletter-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(240,236,227,0.65);
+  line-height: 1.5;
+}
+.feature-check {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(10,122,106,0.22);
+  border: 1px solid rgba(20,168,150,0.32);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.feature-check svg {
+  width: 10px; height: 10px;
+  stroke: var(--teal-light);
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hero-free-note {
+  font-size: 12px;
+  color: rgba(240,236,227,0.28);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-free-note::before {
+  content: '';
+  width: 20px; height: 1px;
+  background: rgba(240,236,227,0.15);
+}
+
+/* ─── CAPTURE CARD ─── */
+.capture-card {
+  background: var(--white);
+  border-radius: 10px 10px 0 0;
+  padding: 40px 36px;
+  box-shadow: 0 -8px 48px rgba(0,0,0,0.3);
+}
+.capture-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 8px;
+  display: block;
+}
+.capture-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+.capture-card h2 em { font-style: italic; color: var(--teal); }
+.capture-sub {
+  font-size: 13px;
+  color: var(--soft);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.form-group { margin-bottom: 14px; }
+.form-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 5px;
+  letter-spacing: 0.03em;
+}
+.form-input {
+  width: 100%;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 13px;
+  padding: 11px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(10,122,106,0.08); }
+.form-input::placeholder { color: var(--ghost); }
+.btn-subscribe {
+  width: 100%;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.15s;
+  margin-top: 8px;
+}
+.btn-subscribe:hover { background: #d9a03a; }
+.form-privacy {
+  font-size: 11px;
+  color: var(--ghost);
+  line-height: 1.55;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* ─── CONTAINER / SECTION ─── */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 40px; }
+.section { padding: 88px 0; }
+.section-alt { background: var(--white); }
+.section-dark { background: var(--navy); }
+
+/* ─── BRAND PHOTO ─── */
+.photo-band {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+}
+.photo-band-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+.photo-band-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(13,35,64,0.92) 0%, transparent 55%);
+  padding: 40px 56px 36px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.photo-quote {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 600;
+  font-style: italic;
+  color: #F0ECE3;
+  max-width: 520px;
+  line-height: 1.4;
+}
+.photo-tagline {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+/* ─── WHAT'S INSIDE ─── */
+.inside-intro {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 52px;
+}
+.inside-intro h2 {
+  font-size: clamp(24px, 2.8vw, 34px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.18;
+}
+.inside-intro h2 em { font-style: italic; color: var(--teal); }
+.inside-intro p {
+  font-size: 15px;
+  color: var(--soft);
+  line-height: 1.75;
+}
+.inside-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.inside-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--teal);
+  border-radius: 0 0 8px 8px;
+  padding: 24px 22px;
+}
+.inside-card-num {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(10,122,106,0.14);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.inside-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 7px;
+  line-height: 1.35;
+}
+.inside-card-desc {
+  font-size: 13px;
+  color: var(--soft);
+  line-height: 1.65;
+}
+
+/* ─── ETHICS STATEMENT ─── */
+.ethics-band {
+  background: var(--teal-pale);
+  border-top: 1px solid rgba(10,122,106,0.12);
+  border-bottom: 1px solid rgba(10,122,106,0.12);
+  padding: 64px 0;
+  text-align: center;
+}
+.ethics-inner {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.ethics-inner h2 {
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.ethics-inner h2 em { font-style: italic; color: var(--teal); }
+.ethics-inner p {
+  font-size: 15px;
+  color: var(--soft);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+/* ─── WHO SECTION ─── */
+.who-intro {
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+.who-intro h2 {
+  font-size: clamp(24px, 2.8vw, 34px);
+  font-weight: 700;
+  color: #F0ECE3;
+  margin-bottom: 12px;
+  line-height: 1.18;
+}
+.who-intro h2 em { font-style: italic; color: #8DD8CC; }
+.who-intro p {
+  font-size: 15px;
+  color: rgba(240,236,227,0.55);
+  line-height: 1.75;
+}
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.who-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 18px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.who-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.who-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #F0ECE3;
+  margin-bottom: 2px;
+}
+.who-abbr {
+  font-size: 11px;
+  color: rgba(240,236,227,0.32);
+  letter-spacing: 0.04em;
+}
+.settings-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.setting-pill {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(240,236,227,0.4);
+}
+
+/* ─── ABOUT THE AUTHOR ─── */
+.author-block {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.author-avatar {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--teal-pale);
+}
+.author-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.author-name {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.author-creds {
+  font-size: 12px;
+  color: var(--teal);
+  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+.author-bio {
+  font-size: 13px;
+  color: var(--soft);
+  line-height: 1.7;
+}
+
+/* ─── SECOND SIGNUP ─── */
+.second-signup {
+  background: var(--gold-pale);
+  border: 1px solid rgba(201,146,42,0.15);
+  border-radius: 10px;
+  padding: 48px 40px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.second-signup h2 {
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.second-signup h2 em { font-style: italic; color: var(--teal); }
+.second-signup p {
+  font-size: 14px;
+  color: var(--soft);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+.second-form {
+  display: flex;
+  gap: 10px;
+  max-width: 420px;
+  margin: 0 auto 12px;
+}
+.second-form input {
+  flex: 1;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 13px;
+  padding: 12px 14px;
+  border: 1px solid rgba(201,146,42,0.25);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--ink);
+  outline: none;
+}
+.second-form input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(10,122,106,0.08); }
+.second-form input::placeholder { color: var(--ghost); }
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: #d9a03a; }
+.second-privacy { font-size: 11px; color: var(--ghost); line-height: 1.5; }
+
+/* ─── COURSE TEASER ─── */
+.course-teaser {
+  background: var(--navy);
+  padding: 64px 0;
+}
+.course-teaser-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+}
+.course-teaser h2 {
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 700;
+  color: #F0ECE3;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.course-teaser h2 em { font-style: italic; color: #8DD8CC; }
+.course-teaser p { font-size: 13px; color: rgba(240,236,227,0.5); line-height: 1.65; }
+.btn-course {
+  background: transparent;
+  color: var(--gold-light);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: 1px solid rgba(201,146,42,0.35);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  transition: background 0.15s, border-color 0.15s;
+}
+.btn-course:hover { background: rgba(201,146,42,0.08); border-color: rgba(201,146,42,0.6); }
+
+/* ─── SECONDARY PHOTO ─── */
+.secondary-photo-section { overflow: hidden; }
+.secondary-photo-img {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+/* ─── FOOTER ─── */
+.footer { background: var(--navy); padding: 56px 0 32px; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-inner { max-width: 1140px; margin: 0 auto; padding: 0 40px; }
+.footer-top { display: grid; grid-template-columns: 280px 1fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 28px; }
+.footer-brand-name { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: #F0ECE3; margin-bottom: 6px; }
+.footer-brand-tag { font-size: 11px; color: rgba(240,236,227,0.35); line-height: 1.55; margin-bottom: 16px; }
+.footer-promise { font-size: 11px; font-style: italic; color: rgba(240,236,227,0.28); line-height: 1.55; font-family: 'Fraunces', serif; }
+.footer-col-label { font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(240,236,227,0.28); margin-bottom: 14px; display: block; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { font-size: 12px; color: rgba(240,236,227,0.45); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: #F0ECE3; }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-legal { font-size: 11px; color: rgba(240,236,227,0.22); }
+.footer-tagline { font-family: 'Fraunces', serif; font-size: 12px; font-style: italic; color: rgba(240,236,227,0.22); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 0; }
+  .capture-card { border-radius: 10px; margin-top: 40px; }
+  .author-block { grid-template-columns: 1fr; }
+  .course-teaser-inner { grid-template-columns: 1fr; gap: 24px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .container { padding: 0 20px; }
+  .section { padding: 64px 0; }
+  .second-form { flex-direction: column; }
+  .footer-top { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="clinical_ai_collective_homepage.html" class="nav-brand" style="text-decoration:none;">
+      <span class="nav-brand-name">Clinical AI Collective</span>
+      <span class="nav-brand-tag">Ethical AI for Allied Health</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="clinical_ai_collective_about.html">About</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="clinical_ai_collective_course.html">Courses</a></li>
+      <li><a href="clinical_ai_collective_newsletter.html" style="color:#F0ECE3;">Free Newsletter</a></li>
+      <li><a href="#">Partnerships</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── HERO + CAPTURE ─── -->
+<section class="newsletter-hero" aria-label="Newsletter signup hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="free-badge">
+        <span class="free-badge-dot"></span>
+        <span class="free-badge-text">Free &nbsp;&middot;&nbsp; No credit card</span>
+      </div>
+      <span class="eyebrow eyebrow-light">The Clinical AI Collective Newsletter</span>
+      <h1>Stay ahead of AI<br>in allied health.<br><em>Ethically.</em></h1>
+      <p class="hero-sub">Practical prompts, ethical guidance, workflow strategies, and continuing education updates delivered directly to your inbox. Written by a doctoral-level, board-certified clinician for the full allied health workforce.</p>
+      <div class="newsletter-features">
+        <div class="newsletter-feature">
+          <div class="feature-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          Ethical AI guidance aligned with ASHA, AOTA, and APTA positions
+        </div>
+        <div class="newsletter-feature">
+          <div class="feature-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          Credential-specific prompts you can use in your next documentation session
+        </div>
+        <div class="newsletter-feature">
+          <div class="feature-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          Continuing education announcements and early enrollment access
+        </div>
+        <div class="newsletter-feature">
+          <div class="feature-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          Honest conversations about what AI can and cannot do in clinical settings
+        </div>
+        <div class="newsletter-feature">
+          <div class="feature-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          Community spotlights, peer resources, and Library updates
+        </div>
+      </div>
+      <p class="hero-free-note">Free. Unsubscribe any time. Your information is never shared or sold.</p>
+    </div>
+
+    <!-- ─── CAPTURE CARD ─── -->
+    <div>
+      <div class="capture-card">
+        <span class="capture-label">Subscribe &mdash; it is free</span>
+        <h2>Join the<br><em>Clinical AI Collective</em></h2>
+        <p class="capture-sub">Enter your information below and you will receive your first issue shortly, along with an invitation to the free, closed community.</p>
+        <form onsubmit="return false;" aria-label="Newsletter signup form">
+          <div class="form-group">
+            <label class="form-label" for="first-name">First name</label>
+            <input class="form-input" type="text" id="first-name" name="first_name" placeholder="Your first name" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email address</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="Your work or personal email" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="profession">Your primary credential</label>
+            <select class="form-input" id="profession" name="profession">
+              <option value="" disabled selected>Select your credential</option>
+              <option>Speech-Language Pathologist (SLP)</option>
+              <option>Occupational Therapist (OT)</option>
+              <option>Physical Therapist (PT)</option>
+              <option>Certified Occupational Therapy Assistant (COTA)</option>
+              <option>Physical Therapist Assistant (PTA)</option>
+              <option>Speech-Language Pathology Assistant (SLPA)</option>
+              <option>Audiologist (AuD / PhD)</option>
+              <option>Other allied health professional</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="setting">Primary practice setting</label>
+            <select class="form-input" id="setting" name="setting">
+              <option value="" disabled selected>Select your setting</option>
+              <option>School-based</option>
+              <option>Skilled Nursing Facility (SNF)</option>
+              <option>Acute Care / Hospital</option>
+              <option>Home Health</option>
+              <option>Private Practice / Outpatient</option>
+              <option>Telepractice</option>
+              <option>University / Academic</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-subscribe">Subscribe &mdash; it is free</button>
+        </form>
+        <p class="form-privacy">No spam. No credit card. Unsubscribe any time. Your information is never shared or sold. By subscribing you agree to receive emails from the Clinical AI Collective.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BRAND PHOTO ─── -->
+<div class="photo-band">
+  <img src="Clinical_AI_Collective_brand_photo.png" alt="Clinical AI Collective allied health professionals including SLPs, OTs, and PTs collaborating with ethical AI tools" class="photo-band-img">
+  <div class="photo-band-overlay">
+    <p class="photo-quote">"Better workflows. Ethical AI. Exceptional care. Together."</p>
+    <span class="photo-tagline">Clinical AI Collective</span>
+  </div>
+</div>
+
+<!-- ─── WHAT'S INSIDE ─── -->
+<section class="section section-alt" id="inside">
+  <div class="container">
+    <div class="inside-intro">
+      <span class="eyebrow">What subscribers receive</span>
+      <h2>Practical, ethical, <em>clinician-built.</em></h2>
+      <p>Every issue of the Clinical AI Collective newsletter is written specifically for the allied health professional who is already being asked to navigate AI without adequate preparation or support.</p>
+    </div>
+    <div class="inside-grid">
+      <div class="inside-card">
+        <p class="inside-card-num">01</p>
+        <p class="inside-card-title">Ethical AI guidance</p>
+        <p class="inside-card-desc">Updated professional association positions from ASHA, AOTA, and APTA on AI use in clinical practice. When guidance changes, you hear it here first.</p>
+      </div>
+      <div class="inside-card">
+        <p class="inside-card-num">02</p>
+        <p class="inside-card-title">Credential-specific prompts</p>
+        <p class="inside-card-desc">Ready-to-use prompts organized by discipline and setting. SLP, OT, PT, COTA, PTA, SLPA, and Audiology. School, SNF, acute care, home health, outpatient, and telepractice.</p>
+      </div>
+      <div class="inside-card">
+        <p class="inside-card-num">03</p>
+        <p class="inside-card-title">Workflow strategies</p>
+        <p class="inside-card-desc">Practical documentation workflow improvements you can implement in your next session. No generic tips. No advice written for a different profession.</p>
+      </div>
+      <div class="inside-card">
+        <p class="inside-card-num">04</p>
+        <p class="inside-card-title">CE and course announcements</p>
+        <p class="inside-card-desc">Newsletter subscribers are first to hear about continuing education opportunities, course enrollment windows, and early registration access and pricing.</p>
+      </div>
+      <div class="inside-card">
+        <p class="inside-card-num">05</p>
+        <p class="inside-card-title">Community and library updates</p>
+        <p class="inside-card-desc">New resources added to the Clinical AI Collective Library, peer spotlights, and community discussions worth reading even if you missed them live.</p>
+      </div>
+      <div class="inside-card">
+        <p class="inside-card-num">06</p>
+        <p class="inside-card-title">Honest commentary</p>
+        <p class="inside-card-desc">Clear, direct analysis of AI developments in healthcare. What matters for allied health professionals, what does not, and what to watch with appropriate caution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ETHICS STATEMENT ─── -->
+<div class="ethics-band">
+  <div class="ethics-inner">
+    <span class="eyebrow" style="display:block;text-align:center;">What this newsletter is not</span>
+    <h2>No hype. No generic tips.<br><em>No AI cheerleading.</em></h2>
+    <p>The Clinical AI Collective newsletter is grounded in the same commitments as the platform: AI assists, clinicians decide, and every recommendation reflects the professional ethics and scope of practice that govern your license.</p>
+    <p>This is not a newsletter that will tell you AI is going to transform healthcare and leave you to figure out what that means for your daily notes. It will tell you specifically what to do, why it is ethical to do it, and how to review it before it becomes part of the clinical record.</p>
+  </div>
+</div>
+
+<!-- ─── WHO THIS IS FOR ─── -->
+<section class="section section-dark" id="who">
+  <div class="container">
+    <div class="who-intro">
+      <span class="eyebrow eyebrow-light">Who subscribes</span>
+      <h2>Every credential.<br><em>Every setting.</em></h2>
+      <p>The newsletter is written for the full allied health workforce. If you document clinical care, this newsletter was written for you.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Speech-Language Pathologists</p><p class="who-abbr">SLP</p></div></div>
+      <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Occupational Therapists</p><p class="who-abbr">OT</p></div></div>
+      <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Physical Therapists</p><p class="who-abbr">PT</p></div></div>
+      <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Certified OT Assistants</p><p class="who-abbr">COTA</p></div></div>
+      <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Physical Therapist Assistants</p><p class="who-abbr">PTA</p></div></div>
+      <div class="who-card"><span class="who-dot"></span><div><p class="who-name">SLP Assistants</p><p class="who-abbr">SLPA</p></div></div>
+      <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Audiologists</p><p class="who-abbr">AuD / PhD</p></div></div>
+    </div>
+    <div class="settings-row">
+      <span class="setting-pill">School-based</span>
+      <span class="setting-pill">Skilled Nursing Facility</span>
+      <span class="setting-pill">Acute Care / Hospital</span>
+      <span class="setting-pill">Home Health</span>
+      <span class="setting-pill">Private Practice / Outpatient</span>
+      <span class="setting-pill">Telepractice</span>
+      <span class="setting-pill">University / Academic</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECONDARY PHOTO ─── -->
+<div class="secondary-photo-section">
+  <img src="Clinical_AI_Collective_secondary_photo1.png" alt="Allied health professionals across occupational therapy, physical therapy, speech-language pathology, and audiology collaborating" class="secondary-photo-img">
+</div>
+
+<!-- ─── ABOUT THE AUTHOR ─── -->
+<section class="section" id="author">
+  <div class="container">
+    <span class="eyebrow">Written by</span>
+    <h2 style="font-size:clamp(22px,2.5vw,30px);font-weight:700;color:var(--navy);margin-bottom:32px;line-height:1.18;">From the clinical lens. <em style="font-style:italic;color:var(--teal);">Every time.</em></h2>
+    <div class="author-block">
+      <div class="author-avatar">
+        <img src="Clinical_AI_Collective_brand_photo.png" alt="Regina Lemmon Bush, PhD, CCC-SLP, Founder of Clinical AI Collective">
+      </div>
+      <div>
+        <p class="author-name">Regina Lemmon Bush</p>
+        <p class="author-creds">PhD, CCC-SLP &nbsp;&middot;&nbsp; Full Professor &nbsp;&middot;&nbsp; Clinical Strategist &nbsp;&middot;&nbsp; AI Healthcare Consultant &nbsp;&middot;&nbsp; Speaker</p>
+        <p class="author-bio">Regina Lemmon Bush is a doctoral-prepared speech-language pathologist, full professor, clinical strategist, AI healthcare consultant, and keynote speaker with over 20 years of experience across clinical practice, academic leadership, research, and executive AI consulting. She founded the Clinical AI Collective after identifying a critical gap: no AI resource for allied health professionals was built by someone who had actually done the clinical work, understood the documentation standards, or knew what it felt like to finish notes in a parking lot at five o'clock. Every issue of this newsletter is written from that lens.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECOND SIGNUP ─── -->
+<section class="section section-alt" id="subscribe">
+  <div class="container">
+    <div class="second-signup">
+      <span class="eyebrow" style="display:block;text-align:center;">Ready?</span>
+      <h2>Subscribe.<br><em>It is free.</em></h2>
+      <p>Enter your email and you will receive your first issue shortly, along with an invitation to the free Clinical AI Collective community.</p>
+      <form class="second-form" onsubmit="return false;" aria-label="Second newsletter signup">
+        <input type="email" placeholder="Your email address" autocomplete="email" aria-label="Email address">
+        <button type="submit" class="btn-primary">Subscribe free</button>
+      </form>
+      <p class="second-privacy">No spam. No credit card. Unsubscribe any time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── COURSE TEASER ─── -->
+<div class="course-teaser">
+  <div class="course-teaser-inner">
+    <div>
+      <span class="eyebrow eyebrow-gold" style="display:block;margin-bottom:8px;">Launching June 21, 2026</span>
+      <h2>Ready for the full course? <em>The AI Clinical Efficiency Accelerator is enrolling.</em></h2>
+      <p>Session starts June 21, 2026. Founding members enroll at $349, saving $150 off the regular price. Newsletter subscribers receive early enrollment access and the founding member eBook bonus.</p>
+    </div>
+    <a href="clinical_ai_collective_course.html" class="btn-course">View the course &rarr;</a>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand-name">Clinical AI Collective</p>
+        <p class="footer-brand-tag">Ethical AI for Allied Health Professionals. Every credential. Every setting.</p>
+        <p class="footer-promise">"AI tools you can trust. Community you can count on. Care you will be proud of."</p>
+      </div>
+      <div>
+        <span class="footer-col-label">Platform</span>
+        <ul class="footer-links">
+          <li><a href="clinical_ai_collective_homepage.html">Home</a></li>
+          <li><a href="clinical_ai_collective_about.html">About</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="clinical_ai_collective_course.html">Courses</a></li>
+          <li><a href="#">Partnerships</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-label">Resources</span>
+        <ul class="footer-links">
+          <li><a href="clinical_ai_collective_newsletter.html">Free Newsletter</a></li>
+          <li><a href="#">The Library</a></li>
+          <li><a href="#">Blog and Insights</a></li>
+          <li><a href="#">Support Hub</a></li>
+          <li><a href="#">Ask the Professor</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-label">Legal and contact</span>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Partnership Inquiry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">&copy; 2026 Clinical AI Collective. Founded by Regina Lemmon Bush, PhD, CCC-SLP. All rights reserved.</p>
+      <p class="footer-tagline">Ethical AI. Better Workflows. Exceptional Care.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
