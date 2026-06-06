@@ -637,14 +637,27 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
 }
 .btn-course:hover { background: rgba(201,146,42,0.08); border-color: rgba(201,146,42,0.6); }
 
-/* ─── SECONDARY PHOTO ─── */
-.secondary-photo-section { overflow: hidden; }
-.secondary-photo-img {
-  width: 100%;
-  max-height: 340px;
-  object-fit: cover;
-  object-position: center 30%;
+/* ─── LOGO BAND ─── */
+.secondary-photo-section {
+  background: var(--navy);
+  padding: 56px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.secondary-photo-section img {
+  width: 140px;
+  height: auto;
   display: block;
+}
+.logo-band-tagline {
+  font-family: 'Fraunces', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: rgba(240,236,227,0.4);
+  letter-spacing: 0.04em;
 }
 
 /* ─── FOOTER ─── */
@@ -883,7 +896,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
       <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Physical Therapist Assistants</p><p class="who-abbr">PTA</p></div></div>
       <div class="who-card"><span class="who-dot"></span><div><p class="who-name">SLP Assistants</p><p class="who-abbr">SLPA</p></div></div>
       <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Audiologists</p><p class="who-abbr">AuD / PhD</p></div></div>
-      <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Rehabilitation Professionals, Social Workers</p><p class="who-abbr"></p></div></div>
+      <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Rehabilitation Professionals</p><p class="who-abbr">Rehab / Case Mgmt</p></div></div>
+      <div class="who-card"><span class="who-dot"></span><div><p class="who-name">Social Workers</p><p class="who-abbr">MSW / LCSW</p></div></div>
     </div>
     <div class="settings-row">
       <span class="setting-pill">School-based</span>
@@ -897,9 +911,10 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
   </div>
 </section>
 
-<!-- ─── SECONDARY PHOTO ─── -->
+<!-- ─── LOGO BAND ─── -->
 <div class="secondary-photo-section">
-  <img src="Clinical_AI_Collective_secondary_photo1.png" alt="Allied health professionals across occupational therapy, physical therapy, speech-language pathology, and audiology collaborating" class="secondary-photo-img">
+  <img src="clinical_ai_collective_logo.png" alt="Clinical AI Collective — three figures in teal, blue, and purple with a gold arc">
+  <span class="logo-band-tagline">Ethical AI. Better Workflows. Exceptional Care.</span>
 </div>
 
 <!-- ─── PAST ISSUES ─── -->
