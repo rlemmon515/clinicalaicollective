@@ -82,7 +82,24 @@ h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.15; }
 }
 .ty-headline { font-size: clamp(30px, 4vw, 52px); font-weight: 700; color: #F0ECE3; margin-bottom: 18px; line-height: 1.1; }
 .ty-headline em { font-style: italic; color: #8DD8CC; }
-.ty-sub { font-size: 16px; color: rgba(240,236,227,0.6); line-height: 1.75; max-width: 520px; margin: 0 auto 48px; }
+.ty-sub { font-size: 16px; color: rgba(240,236,227,0.6); line-height: 1.75; max-width: 520px; margin: 0 auto 32px; }
+.ty-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: opacity 0.15s, transform 0.12s;
+  margin-bottom: 48px;
+}
+.ty-download-btn:hover { opacity: 0.88; transform: translateY(-1px); }
 
 /* ── NEXT STEPS ── */
 .steps-section { background: var(--white); padding: 72px 40px; }
@@ -170,7 +187,10 @@ h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.15; }
   </div>
   <span class="ty-eyebrow">You are confirmed</span>
   <h1 class="ty-headline">You are in.<br><em>Welcome to the Collective.</em></h1>
-  <p class="ty-sub">Your spot on the waitlist is confirmed and your first Clinical AI Brief Newsletter is on its way. Check your inbox — and your spam folder just in case — within the next few minutes.</p>
+  <p class="ty-sub">Your spot is confirmed. Access your first issue of the <em>Clinical AI Brief</em> right now — no waiting for an email.</p>
+  <a href="newsletters/ClinicalAIBrief_Issue01.pdf" class="ty-download-btn" target="_blank" rel="noopener" download>
+    &#8595;&nbsp; Download Issue 01 — Getting Started with AI Documentation
+  </a>
 </section>
 
 <!-- ── NEXT STEPS ── -->
@@ -184,8 +204,8 @@ h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.15; }
       <div class="step-row" role="listitem">
         <div class="step-num"><span class="step-num-text">1</span></div>
         <div class="step-body">
-          <p class="step-title">Check your inbox for your first Clinical AI Brief</p>
-          <p class="step-desc">Your welcome email and first newsletter issue are on their way. If you do not see it within a few minutes, check your spam or promotions folder. Add <strong>hello@clinicalaicollective.com</strong> to your contacts to keep future issues out of spam.</p>
+          <p class="step-title">Download Issue 01 above — then whitelist our email</p>
+          <p class="step-desc">Your first issue is available to download right now using the button above. Future issues will be delivered to your inbox — add <strong>hello@clinicalaicollective.com</strong> to your contacts so they never go to spam.</p>
         </div>
       </div>
       <div class="step-row" role="listitem">
@@ -220,7 +240,7 @@ h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.15; }
     <p>Every allied health professional documenting clinical care is navigating AI right now — most of them without any guidance built for their credential. Send them here.</p>
     <div class="share-buttons">
       <a href="clinical_ai_collective_optin.html" class="share-btn share-btn-primary">Share the Waitlist Page</a>
-      <a href="clinical_ai_collective_newsletter.html" class="share-btn share-btn-ghost">View Newsletter Archive</a>
+      <a href="clinical_ai_collective_newsletter.html" class="share-btn share-btn-ghost">Subscribe to the Newsletter</a>
     </div>
   </div>
 </section>
