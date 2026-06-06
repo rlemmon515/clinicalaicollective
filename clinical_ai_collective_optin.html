@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join the Waitlist — AI Clinical Efficiency Accelerator | Clinical AI Collective</title>
+<meta name="description" content="Join allied health professionals on the waitlist for the AI Clinical Efficiency Accelerator. Ethics-first, credential-aware AI training launching June 21, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:        #0D2340;
+  --navy-mid:    #1A3A5C;
+  --teal:        #0A7A6A;
+  --teal-light:  #14A896;
+  --teal-pale:   #E0F5F2;
+  --gold:        #C9922A;
+  --gold-light:  #F0D9A8;
+  --gold-pale:   #FDF6E8;
+  --ink:         #1A1A1A;
+  --soft:        #4A4A4A;
+  --ghost:       #888888;
+  --rule:        #DDDDDD;
+  --bg:          #F8F7F4;
+  --white:       #FFFFFF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Epilogue', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spacing: -0.2px; }
+.eyebrow {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  display: block;
+  margin-bottom: 12px;
+}
+.eyebrow-light { color: var(--teal-light); }
+.eyebrow-gold  { color: var(--gold); }
+
+/* ── URGENCY BAR ── */
+.urgency-bar {
+  background: var(--gold);
+  padding: 10px 20px;
+  text-align: center;
+}
+.urgency-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.urgency-text { font-size: 12px; color: var(--navy); font-weight: 500; }
+.urgency-count {
+  font-family: 'Fraunces', serif;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--navy);
+  background: rgba(0,0,0,0.08);
+  padding: 3px 12px;
+  border-radius: 100px;
+}
+
+/* ── NAV ── */
+.nav {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 24px;
+}
+.nav-brand { display: flex; flex-direction: column; gap: 1px; text-decoration: none; }
+.nav-brand-name { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: #F0ECE3; letter-spacing: -0.2px; line-height: 1; }
+.nav-brand-tag  { font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-light); opacity: 0.8; }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { font-size: 12px; font-weight: 500; color: rgba(240,236,227,0.55); text-decoration: none; letter-spacing: 0.03em; transition: color 0.15s; }
+.nav-links a:hover, .nav-links a.active { color: #F0ECE3; }
+.nav-cta {
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+  display: inline-block;
+}
+.nav-cta:hover { background: #d9a03a; }
+
+/* ── HERO ── */
+.optin-hero {
+  background: var(--navy);
+  padding: 80px 0 96px;
+}
+.optin-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: start;
+}
+.optin-headline {
+  font-size: clamp(30px, 4vw, 50px);
+  font-weight: 700;
+  color: #F0ECE3;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.optin-headline em { font-style: italic; color: #8DD8CC; }
+.optin-sub {
+  font-size: 16px;
+  color: rgba(240,236,227,0.62);
+  line-height: 1.75;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+.benefit-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
+.benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: rgba(240,236,227,0.75);
+  line-height: 1.55;
+}
+.benefit-list li::before {
+  content: '✓';
+  color: var(--teal-light);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.social-proof-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  max-width: 480px;
+}
+.sp-avatars { display: flex; }
+.sp-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--navy-mid);
+  border: 2px solid var(--navy);
+  margin-right: -8px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.sp-text { font-size: 12px; color: rgba(240,236,227,0.5); line-height: 1.4; }
+.sp-text strong { color: rgba(240,236,227,0.85); }
+
+/* ── FORM CARD ── */
+.form-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+  position: sticky;
+  top: 88px;
+}
+.form-card-eyebrow {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  display: block;
+  margin-bottom: 6px;
+}
+.form-card-title {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+.form-card-sub { font-size: 13px; color: var(--soft); margin-bottom: 24px; line-height: 1.55; }
+.form-group { margin-bottom: 14px; }
+.form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--bg);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(10,122,106,0.1);
+  background: var(--white);
+}
+.form-group input::placeholder { color: var(--ghost); }
+.select-wrapper { position: relative; }
+.select-wrapper::after {
+  content: '▾';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ghost);
+  pointer-events: none;
+  font-size: 12px;
+}
+.form-submit {
+  width: 100%;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 28px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  letter-spacing: 0.02em;
+  margin-top: 6px;
+}
+.form-submit:hover { background: #d9a03a; transform: translateY(-1px); }
+.form-submit:active { transform: translateY(0); }
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.form-privacy {
+  font-size: 11px;
+  color: var(--ghost);
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+.form-divider { height: 1px; background: var(--rule); margin: 20px 0; }
+.form-includes { display: flex; flex-direction: column; gap: 7px; }
+.form-includes-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--soft);
+}
+.form-includes-item::before { content: '→'; color: var(--teal); font-weight: 700; font-size: 11px; }
+.form-message {
+  display: none;
+  padding: 12px 16px;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.form-message.error  { background: #FEF2F2; border: 1px solid #FECACA; color: #991B1B; }
+.form-message.success { background: var(--teal-pale); border: 1px solid rgba(10,122,106,0.3); color: var(--teal); }
+
+/* ── BENEFITS ── */
+.benefits-section { background: var(--white); padding: 88px 0; }
+.section-header { text-align: center; max-width: 580px; margin: 0 auto 56px; padding: 0 40px; }
+.section-header h2 { font-size: clamp(24px, 2.8vw, 36px); font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.18; }
+.section-header h2 em { font-style: italic; color: var(--teal); }
+.section-header p { font-size: 15px; color: var(--soft); line-height: 1.75; }
+.benefits-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.benefit-card { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 32px 28px; }
+.benefit-icon { width: 44px; height: 44px; background: var(--teal-pale); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 18px; }
+.benefit-card h3 { font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+.benefit-card p { font-size: 13px; color: var(--soft); line-height: 1.65; }
+
+/* ── WHY NOW ── */
+.why-now {
+  background: var(--gold-pale);
+  border-top: 1px solid rgba(201,146,42,0.2);
+  border-bottom: 1px solid rgba(201,146,42,0.2);
+  padding: 80px 0;
+}
+.why-now-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 64px;
+  align-items: center;
+}
+.why-now h2 { font-size: clamp(22px, 2.5vw, 32px); font-weight: 700; color: var(--navy); margin-bottom: 16px; line-height: 1.18; }
+.why-now h2 em { font-style: italic; color: var(--gold); }
+.why-now p { font-size: 14px; color: var(--soft); line-height: 1.75; margin-bottom: 14px; }
+.launch-date-card {
+  background: var(--white);
+  border: 1px solid rgba(201,146,42,0.25);
+  border-radius: 8px;
+  padding: 36px 28px;
+  text-align: center;
+}
+.launch-date-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
+.launch-date { font-family: 'Fraunces', serif; font-size: 52px; font-weight: 700; color: var(--navy); line-height: 1; }
+.launch-month { font-family: 'Fraunces', serif; font-size: 18px; color: var(--soft); margin-bottom: 20px; font-style: italic; }
+.days-pill {
+  background: var(--navy);
+  color: #F0ECE3;
+  font-family: 'Fraunces', serif;
+  font-size: 13px;
+  font-style: italic;
+  padding: 8px 20px;
+  border-radius: 100px;
+  display: inline-block;
+}
+
+/* ── ABOUT BRIEF ── */
+.about-brief { background: var(--navy); padding: 88px 0; }
+.about-brief-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.about-photo-frame {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--navy-mid);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.about-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.about-text h2 { font-size: clamp(22px, 2.5vw, 32px); font-weight: 700; color: #F0ECE3; margin-bottom: 16px; line-height: 1.2; }
+.about-text h2 em { font-style: italic; color: #8DD8CC; }
+.about-text p { font-size: 14px; color: rgba(240,236,227,0.6); line-height: 1.8; margin-bottom: 14px; }
+.cred-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.cred-badge { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(240,236,227,0.65); font-size: 11px; font-weight: 500; padding: 5px 12px; border-radius: 100px; }
+
+/* ── FAQ ── */
+.faq-section { background: var(--bg); padding: 88px 0; }
+.faq-inner { max-width: 740px; margin: 0 auto; padding: 0 40px; }
+.faq-header { text-align: center; margin-bottom: 48px; }
+.faq-header h2 { font-size: clamp(24px, 2.8vw, 34px); font-weight: 700; color: var(--navy); line-height: 1.18; }
+.faq-header h2 em { font-style: italic; color: var(--teal); }
+.faq-list { border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+.faq-item { border-bottom: 1px solid var(--rule); background: var(--white); }
+.faq-item:last-child { border-bottom: none; }
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 28px;
+  text-align: left;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background 0.15s;
+}
+.faq-question:hover { background: var(--bg); }
+.faq-question.open { background: var(--teal-pale); }
+.faq-chevron { font-size: 11px; color: var(--ghost); transition: transform 0.2s; flex-shrink: 0; }
+.faq-question.open .faq-chevron { transform: rotate(180deg); }
+.faq-answer { display: none; padding: 0 28px 22px; font-size: 13px; color: var(--soft); line-height: 1.75; background: var(--teal-pale); }
+.faq-answer.open { display: block; }
+
+/* ── SECOND FORM ── */
+.second-form-section {
+  background: var(--teal-pale);
+  border-top: 1px solid rgba(10,122,106,0.15);
+  border-bottom: 1px solid rgba(10,122,106,0.15);
+  padding: 88px 0;
+}
+.second-form-inner { max-width: 560px; margin: 0 auto; padding: 0 40px; text-align: center; }
+.second-form-inner h2 { font-size: clamp(22px, 2.8vw, 34px); font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.18; }
+.second-form-inner h2 em { font-style: italic; color: var(--teal); }
+.second-form-inner > p { font-size: 15px; color: var(--soft); line-height: 1.75; margin-bottom: 36px; }
+.inline-form { display: flex; flex-direction: column; gap: 12px; }
+.inline-form-row { display: flex; gap: 12px; }
+.inline-form input,
+.inline-form .select-wrapper select {
+  flex: 1;
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--white);
+  transition: border-color 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.inline-form input:focus,
+.inline-form .select-wrapper select:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(10,122,106,0.1);
+}
+.inline-form input::placeholder { color: var(--ghost); }
+.inline-form-submit {
+  background: var(--navy);
+  color: #F0ECE3;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+  letter-spacing: 0.02em;
+}
+.inline-form-submit:hover { background: var(--navy-mid); }
+.inline-form-privacy { font-size: 11px; color: var(--ghost); line-height: 1.5; }
+
+/* ── FOOTER ── */
+.footer { background: var(--navy); padding: 56px 0 32px; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-inner { max-width: 1140px; margin: 0 auto; padding: 0 40px; }
+.footer-top { display: grid; grid-template-columns: 280px 1fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 28px; }
+.footer-brand-name { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: #F0ECE3; margin-bottom: 6px; }
+.footer-brand-tag { font-size: 11px; color: rgba(240,236,227,0.35); line-height: 1.55; margin-bottom: 16px; }
+.footer-promise { font-size: 11px; font-style: italic; color: rgba(240,236,227,0.28); line-height: 1.55; font-family: 'Fraunces', serif; }
+.footer-col-label { font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(240,236,227,0.28); margin-bottom: 14px; display: block; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { font-size: 12px; color: rgba(240,236,227,0.45); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: #F0ECE3; }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-legal { font-size: 11px; color: rgba(240,236,227,0.22); }
+.footer-tagline { font-family: 'Fraunces', serif; font-size: 12px; font-style: italic; color: rgba(240,236,227,0.22); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .optin-grid { grid-template-columns: 1fr; gap: 40px; }
+  .form-card { position: static; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .why-now-inner { grid-template-columns: 1fr; gap: 32px; }
+  .about-brief-inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-photo-frame { max-width: 200px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .inline-form-row { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .optin-grid, .benefits-grid, .why-now-inner, .about-brief-inner, .faq-inner, .second-form-inner { padding: 0 20px; }
+  .footer-inner { padding: 0 20px; }
+  .footer-top { grid-template-columns: 1fr; }
+  .form-card { padding: 28px 20px; }
+  .optin-hero { padding: 56px 0 64px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── URGENCY BAR ── -->
+<div class="urgency-bar" role="alert">
+  <div class="urgency-inner">
+    <span class="urgency-text"><strong>AI Clinical Efficiency Accelerator</strong> — Course launches June 21, 2026</span>
+    <span id="countdown" class="urgency-count" aria-live="polite"></span>
+  </div>
+</div>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-name">Clinical AI Collective</span>
+      <span class="nav-brand-tag">Ethical AI for Allied Health</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="clinical_ai_collective_about.html">About</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="clinical_ai_collective_course.html">Courses</a></li>
+      <li><a href="clinical_ai_collective_newsletter.html">Newsletter</a></li>
+    </ul>
+    <a href="clinical_ai_collective_optin.html" class="nav-cta active" aria-current="page">Join the Waitlist</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="optin-hero" aria-label="Join the waitlist">
+  <div class="optin-grid">
+
+    <!-- Left: Value prop -->
+    <div class="optin-text">
+      <span class="eyebrow eyebrow-light">Free Access + Course Waitlist</span>
+      <h1 class="optin-headline">Your patients deserve a clinician who <em>isn't burning out.</em></h1>
+      <p class="optin-sub">The <em>AI Clinical Efficiency Accelerator</em> is the first AI course built for allied health professionals — credential-aware, ethics-first, and designed for the documentation realities you face every day. Join the waitlist and get immediate free access to the Clinical AI Brief Newsletter.</p>
+      <ul class="benefit-list" aria-label="What you get">
+        <li>Instant access to the <strong>Clinical AI Brief Newsletter</strong> — evidence-based AI guidance for your credential and setting</li>
+        <li><strong>Free Prompt Toolkit PDF</strong> for your specific credential (SLP, OT, or PT) — documentation prompts that reflect your actual scope of practice</li>
+        <li>Early bird course pricing notification when enrollment opens <strong>June 21, 2026</strong> — waitlist members are first</li>
+        <li>Invitation to a closed community of allied health professionals navigating AI together</li>
+      </ul>
+      <div class="social-proof-bar" aria-label="Community">
+        <div class="sp-avatars" aria-hidden="true">
+          <div class="sp-avatar">SL</div>
+          <div class="sp-avatar">OT</div>
+          <div class="sp-avatar">PT</div>
+          <div class="sp-avatar">SL</div>
+        </div>
+        <p class="sp-text">Allied health professionals have joined the waitlist.<br><strong>Every credential. Every setting.</strong></p>
+      </div>
+    </div>
+
+    <!-- Right: Form card -->
+    <div class="form-card">
+      <span class="form-card-eyebrow">Free — No Credit Card Needed</span>
+      <h2 class="form-card-title">Claim Your Spot</h2>
+      <p class="form-card-sub">Join the waitlist and get your free newsletter and prompt toolkit today.</p>
+
+      <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+
+      <!--
+      ══════════════════════════════════════════════
+      ZOHO CRM WEB-TO-LEAD SETUP — READ BEFORE PUBLISHING
+      ══════════════════════════════════════════════
+      Step 1: Log in to Zoho CRM
+      Step 2: Go to Settings → Customization → Modules → Leads → Web Forms
+      Step 3: Create a new Web Form. Map fields:
+              First Name, Email, Lead Source, Description (for credential)
+      Step 4: Copy the form's generated hidden field values:
+              - xnQsjsdp  (authentication token)
+              - xmIwtLD   (form version)
+      Step 5: Paste those values below, replacing the REPLACE_WITH_... placeholders
+      Step 6: Set the Return URL in Zoho to:
+              https://clinicalaicollective.com/clinical_ai_collective_thankyou.html
+      ══════════════════════════════════════════════
+      -->
+      <form
+        id="waitlist-form"
+        method="POST"
+        action="https://crm.zoho.com/crm/WebToLeadForm"
+        accept-charset="UTF-8"
+        novalidate
+      >
+        <input type="hidden" name="xnQsjsdp"   value="323a33615ea71504dc1cdf9c6dbb4f30c4a23abe14253bb3ab4a3993120cda98">
+        <input type="hidden" name="xmIwtLD"    value="7da496e8b63e2bec0b511196595c43486e6ad96d8ce7f820b9cb957ec851579f1ba30e9f6af9fbaa03ac0a5b0271ee4f">
+        <input type="hidden" name="actionType" value="TGVhZHM=">
+        <input type="hidden" name="zc_gad"     id="zc_gad" value="">
+        <input type="hidden" name="Lead Source" value="Website Waitlist — Hero Form">
+        <input type="hidden" name="returnURL"  value="https://clinicalaicollective.com/clinical_ai_collective_thankyou.html">
+
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="First Name" placeholder="e.g. Sarah" required autocomplete="given-name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="Email" placeholder="you@email.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="credential">Your Credential</label>
+          <div class="select-wrapper">
+            <select id="credential" name="Description" required>
+              <option value="" disabled selected>Select your credential</option>
+              <option>SLP / CCC-SLP</option>
+              <option>SLPA (Speech-Language Pathology Assistant)</option>
+              <option>OT / OTR (Occupational Therapist)</option>
+              <option>COTA (Certified OT Assistant)</option>
+              <option>PT / DPT (Physical Therapist)</option>
+              <option>PTA (Physical Therapist Assistant)</option>
+              <option>Other Allied Health Professional</option>
+              <option>Healthcare Administrator / Leader</option>
+              <option>Student</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="form-submit" id="submit-btn">
+          Claim My Free Spot &rarr;
+        </button>
+
+        <div class="form-divider"></div>
+        <div class="form-includes">
+          <div class="form-includes-item">Clinical AI Brief Newsletter — starts immediately</div>
+          <div class="form-includes-item">Credential-specific Prompt Toolkit PDF — free download</div>
+          <div class="form-includes-item">Early bird pricing notification — June 21</div>
+        </div>
+        <p class="form-privacy">No spam. Unsubscribe anytime. Your information is never sold or shared. HIPAA-mindful always.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── BENEFITS ── -->
+<section class="benefits-section" id="benefits">
+  <div class="section-header">
+    <span class="eyebrow" style="display:block;text-align:center;">What you get — free, immediately</span>
+    <h2>Three things waiting for you <em>on the other side of the form.</em></h2>
+    <p>No payment. No credit card. Just the resources your practice has needed and a community that actually understands your documentation world.</p>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon" aria-hidden="true">&#x1F4CB;</div>
+      <h3>The Clinical AI Brief Newsletter</h3>
+      <p>Evidence-based AI guidance written specifically for allied health professionals. Not generic tech news. Concrete, credential-aware strategies you can implement the same week you read them.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon" aria-hidden="true">&#x1F3AF;</div>
+      <h3>Free Prompt Toolkit PDF</h3>
+      <p>A downloadable prompt library built for your credential and practice setting. SLP, OT, and PT-specific documentation prompts that reflect your actual scope of practice and the standards that govern your license.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon" aria-hidden="true">&#x1F513;</div>
+      <h3>Early Bird Course Access</h3>
+      <p>Waitlist members are the first to know when enrollment opens on June 21, 2026 — and the first to lock in founding-member pricing on the AI Clinical Efficiency Accelerator before it opens to the public.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY NOW ── -->
+<section class="why-now" id="launch">
+  <div class="why-now-inner">
+    <div>
+      <span class="eyebrow eyebrow-gold">Why join now</span>
+      <h2>The course is launching. <em>The list is building.</em></h2>
+      <p>The AI Clinical Efficiency Accelerator opens for enrollment on June 21, 2026. Waitlist members get first access, first notification, and the opportunity to lock in founding member pricing before it adjusts for the general public.</p>
+      <p>Every week you wait is another week of documentation taking time that belongs somewhere else — to your patients, your family, and your actual life.</p>
+      <p>The waitlist is free. The newsletter is free. Join now.</p>
+    </div>
+    <div class="launch-date-card">
+      <span class="launch-date-label">Course Launch Date</span>
+      <p class="launch-date">21</p>
+      <p class="launch-month">June 2026</p>
+      <span id="days-pill" class="days-pill" aria-live="polite">Calculating&hellip;</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT FOUNDER ── -->
+<section class="about-brief" id="founder">
+  <div class="about-brief-inner">
+    <div class="about-photo-frame">
+      <img src="regina_lemmon_bush_headshot.png" alt="Regina Lemmon Bush, PhD, CCC-SLP — Founder, Clinical AI Collective" loading="lazy">
+    </div>
+    <div class="about-text">
+      <span class="eyebrow eyebrow-light">Built by a clinician</span>
+      <h2>Not a content creator. Not a tech company. <em>A clinician who did the work.</em></h2>
+      <p>Regina Lemmon Bush, PhD, CCC-SLP built the Clinical AI Collective because no one else was building it for allied health professionals. After encountering AI for the first time in a home health parking lot — a report unfinished, a preschool closing, and no one to call — she turned a crisis into a methodology.</p>
+      <p>That methodology is the foundation of the AI Clinical Efficiency Accelerator: an ethics-first, credential-aware course built by a doctoral-level, board-certified clinician with 20 years of practice across every major allied health setting.</p>
+      <div class="cred-badges" aria-label="Credentials">
+        <span class="cred-badge">PhD, Communication Sciences &amp; Disorders</span>
+        <span class="cred-badge">CCC-SLP</span>
+        <span class="cred-badge">Full Professor</span>
+        <span class="cred-badge">Former Online Dean</span>
+        <span class="cred-badge">AI Healthcare Consultant</span>
+        <span class="cred-badge">20+ Years Clinical Practice</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <span class="eyebrow" style="display:block;text-align:center;">Frequently asked</span>
+      <h2>Questions we hear <em>before clinicians sign up.</em></h2>
+    </div>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+          Is this built for my specific credential?
+          <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+        </button>
+        <div id="faq-1" class="faq-answer" role="region">
+          Yes. The AI Clinical Efficiency Accelerator is built to be credential-specific — not just profession-specific. SLP documentation standards are not OT standards. COTA scope is not PT scope. Every resource inside reflects that specificity. There are dedicated materials for SLPs, SLPAs, OTs, COTAs, PTs, and PTAs.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+          What is SCORM compliance and does it affect me?
+          <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+        </button>
+        <div id="faq-2" class="faq-answer" role="region">
+          SCORM is the technical standard that healthcare organizations use to track employee training inside their own Learning Management Systems (like HealthStream, Cornerstone, or hospital-issued platforms). If your organization purchases training for your team, SCORM compliance means completion and scores are tracked automatically inside your org's system. Individual clinicians enrolling directly on our site do not need to worry about SCORM — it applies to organizations buying training for their staff. Contact us for organizational licensing and SCORM package options.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+          Is the newsletter really free? No credit card?
+          <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+        </button>
+        <div id="faq-3" class="faq-answer" role="region">
+          Completely free. No credit card, no trial, no catch. The Clinical AI Brief Newsletter is free access for every allied health professional. You will receive evidence-based, credential-aware AI guidance written specifically for the allied health workforce. You can unsubscribe anytime, and your information is never sold or shared.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+          When does the course launch and how much will it cost?
+          <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+        </button>
+        <div id="faq-4" class="faq-answer" role="region">
+          The AI Clinical Efficiency Accelerator opens for enrollment on June 21, 2026. Exact pricing will be announced to waitlist members first — and waitlist members will receive the lowest available rate. Joining the waitlist today is the best way to be notified immediately and access founding member pricing before the general public.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+          My organization wants to purchase training for our whole team. Is that possible?
+          <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+        </button>
+        <div id="faq-5" class="faq-answer" role="region">
+          Yes. Organizational licensing and SCORM-compliant course packages are available for hospital and healthcare organization LMS platforms. If you are a healthcare administrator or organizational buyer, contact us using the link below to discuss group pricing, SCORM package delivery, and volume enrollment options.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SECOND FORM ── -->
+<section class="second-form-section" id="join">
+  <div class="second-form-inner">
+    <span class="eyebrow" style="display:block;text-align:center;">Still reading? That is a good sign.</span>
+    <h2>Ready to stop figuring this out <em>alone?</em></h2>
+    <p>Join the waitlist. Get the newsletter. Get the prompt toolkit. It is all free, it starts today, and it was built for exactly where you practice.</p>
+
+    <!--
+    Same Zoho CRM configuration as the hero form above.
+    Replace the hidden field values with your Zoho tokens.
+    -->
+    <form
+      class="inline-form"
+      method="POST"
+      action="https://crm.zoho.com/crm/WebToLeadForm"
+      accept-charset="UTF-8"
+      enctype="multipart/form-data"
+      id="second-form"
+      novalidate
+    >
+      <input type="hidden" name="xnQsjsdp"   value="323a33615ea71504dc1cdf9c6dbb4f30c4a23abe14253bb3ab4a3993120cda98">
+      <input type="hidden" name="xmIwtLD"    value="7da496e8b63e2bec0b511196595c43486e6ad96d8ce7f820b9cb957ec851579f1ba30e9f6af9fbaa03ac0a5b0271ee4f">
+      <input type="hidden" name="actionType" value="TGVhZHM=">
+      <input type="hidden" name="zc_gad"     id="zc_gad_2" value="">
+      <input type="hidden" name="Lead Source" value="Website Waitlist — Bottom Form">
+      <input type="hidden" name="returnURL"  value="https://clinicalaicollective.com/clinical_ai_collective_thankyou.html">
+
+      <div class="inline-form-row">
+        <input type="text"  name="First Name" placeholder="First name"        required autocomplete="given-name">
+        <input type="email" name="Email"       placeholder="Your email address" required autocomplete="email">
+      </div>
+      <div class="select-wrapper">
+        <select name="Description" required>
+          <option value="" disabled selected>Your credential</option>
+          <option>SLP / CCC-SLP</option>
+          <option>SLPA (Speech-Language Pathology Assistant)</option>
+          <option>OT / OTR (Occupational Therapist)</option>
+          <option>COTA (Certified OT Assistant)</option>
+          <option>PT / DPT (Physical Therapist)</option>
+          <option>PTA (Physical Therapist Assistant)</option>
+          <option>Other Allied Health Professional</option>
+          <option>Healthcare Administrator / Leader</option>
+          <option>Student</option>
+        </select>
+      </div>
+      <button type="submit" class="inline-form-submit">Join the Waitlist &mdash; It&rsquo;s Free &rarr;</button>
+      <p class="inline-form-privacy">No spam. Unsubscribe anytime. Your information is never sold or shared.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand-name">Clinical AI Collective</p>
+        <p class="footer-brand-tag">Ethical AI for Allied Health Professionals. Every credential. Every setting.</p>
+        <p class="footer-promise">&ldquo;AI tools you can trust. Community you can count on. Care you will be proud of.&rdquo;</p>
+      </div>
+      <div>
+        <span class="footer-col-label">Platform</span>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="clinical_ai_collective_about.html">About</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="clinical_ai_collective_course.html">Courses</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-label">Resources</span>
+        <ul class="footer-links">
+          <li><a href="clinical_ai_collective_newsletter.html">Clinical AI Brief Newsletter</a></li>
+          <li><a href="#">Prompt Toolkits</a></li>
+          <li><a href="#">Blog and Insights</a></li>
+          <li><a href="#">Support Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-label">Legal and contact</span>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Partnership Inquiry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">&copy; 2026 Clinical AI Collective. Founded by Regina Lemmon Bush, PhD, CCC-SLP. All rights reserved.</p>
+      <p class="footer-tagline">Ethical AI. Better Workflows. Exceptional Care.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Countdown ──
+function updateCountdown() {
+  var launch = new Date('2026-06-21T00:00:00');
+  var now    = new Date();
+  var diff   = launch - now;
+  var bar    = document.getElementById('countdown');
+  var pill   = document.getElementById('days-pill');
+  if (diff <= 0) {
+    if (bar)  bar.textContent  = 'Enrollment is open!';
+    if (pill) pill.textContent = 'Enrollment open now';
+    return;
+  }
+  var days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  if (bar)  bar.textContent  = days + 'd ' + hours + 'h remaining';
+  if (pill) pill.textContent = days + ' days until launch';
+}
+updateCountdown();
+setInterval(updateCountdown, 60000);
+
+// ── Client-side validation ──
+function wireForm(formId, msgId) {
+  var form = document.getElementById(formId);
+  var msg  = document.getElementById(msgId);
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    var fn   = form.querySelector('[name="First Name"]');
+    var em   = form.querySelector('[name="Email"]');
+    var cr   = form.querySelector('[name="Description"]');
+    var errs = [];
+    if (fn && !fn.value.trim())   errs.push('First name is required.');
+    if (em && !em.value.trim())   errs.push('Email address is required.');
+    if (em && em.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) errs.push('Please enter a valid email address.');
+    if (cr && !cr.value)          errs.push('Please select your credential.');
+    if (errs.length) {
+      e.preventDefault();
+      if (msg) {
+        msg.textContent  = errs.join(' ');
+        msg.className    = 'form-message error';
+        msg.style.display = 'block';
+        msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  });
+}
+wireForm('waitlist-form', 'form-message');
+wireForm('second-form',   null);
+
+// ── FAQ accordion ──
+document.querySelectorAll('.faq-question').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var isOpen = this.classList.contains('open');
+    document.querySelectorAll('.faq-question').forEach(function (b) {
+      b.classList.remove('open');
+      b.setAttribute('aria-expanded', 'false');
+    });
+    document.querySelectorAll('.faq-answer').forEach(function (a) {
+      a.classList.remove('open');
+    });
+    if (!isOpen) {
+      this.classList.add('open');
+      this.setAttribute('aria-expanded', 'true');
+      var ans = document.getElementById(this.getAttribute('aria-controls'));
+      if (ans) ans.classList.add('open');
+    }
+  });
+});
+</script>
+</body>
+</html>

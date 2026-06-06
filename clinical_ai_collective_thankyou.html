@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're In — Clinical AI Collective</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:       #0D2340;
+  --navy-mid:   #1A3A5C;
+  --teal:       #0A7A6A;
+  --teal-light: #14A896;
+  --teal-pale:  #E0F5F2;
+  --gold:       #C9922A;
+  --gold-pale:  #FDF6E8;
+  --soft:       #4A4A4A;
+  --ghost:      #888888;
+  --rule:       #DDDDDD;
+  --bg:         #F8F7F4;
+  --white:      #FFFFFF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Epilogue', sans-serif;
+  background: var(--bg);
+  color: #1A1A1A;
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.15; }
+
+/* ── NAV ── */
+.nav { background: var(--navy); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.nav-inner { max-width: 1140px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.nav-brand { display: flex; flex-direction: column; gap: 1px; text-decoration: none; }
+.nav-brand-name { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: #F0ECE3; line-height: 1; }
+.nav-brand-tag  { font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-light); opacity: 0.8; }
+.nav-home { font-size: 12px; color: rgba(240,236,227,0.5); text-decoration: none; transition: color 0.15s; }
+.nav-home:hover { color: #F0ECE3; }
+
+/* ── HERO ── */
+.ty-hero {
+  background: var(--navy);
+  padding: 96px 40px 88px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.check-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(10,122,106,0.18);
+  border: 2px solid rgba(20,168,150,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+.check-circle svg { width: 34px; height: 34px; stroke: var(--teal-light); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.ty-eyebrow {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  display: block;
+  margin-bottom: 14px;
+}
+.ty-headline { font-size: clamp(30px, 4vw, 52px); font-weight: 700; color: #F0ECE3; margin-bottom: 18px; line-height: 1.1; }
+.ty-headline em { font-style: italic; color: #8DD8CC; }
+.ty-sub { font-size: 16px; color: rgba(240,236,227,0.6); line-height: 1.75; max-width: 520px; margin: 0 auto 48px; }
+
+/* ── NEXT STEPS ── */
+.steps-section { background: var(--white); padding: 72px 40px; }
+.steps-inner { max-width: 760px; margin: 0 auto; }
+.steps-header { text-align: center; margin-bottom: 48px; }
+.steps-eyebrow {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  display: block;
+  margin-bottom: 10px;
+}
+.steps-header h2 { font-size: clamp(22px, 2.8vw, 32px); font-weight: 700; color: var(--navy); line-height: 1.18; }
+.steps-header h2 em { font-style: italic; color: var(--teal); }
+.steps-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+.step-row { display: grid; grid-template-columns: 64px 1fr; align-items: stretch; border-bottom: 1px solid var(--rule); }
+.step-row:last-child { border-bottom: none; }
+.step-num { background: var(--navy); display: flex; align-items: center; justify-content: center; }
+.step-num-text { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; font-style: italic; color: rgba(240,236,227,0.35); }
+.step-body { padding: 22px 28px; background: var(--bg); }
+.step-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 5px; }
+.step-desc { font-size: 13px; color: var(--soft); line-height: 1.65; }
+.step-desc a { color: var(--teal); text-decoration: none; }
+.step-desc a:hover { text-decoration: underline; }
+
+/* ── SHARE SECTION ── */
+.share-section { background: var(--teal-pale); border-top: 1px solid rgba(10,122,106,0.15); border-bottom: 1px solid rgba(10,122,106,0.15); padding: 64px 40px; text-align: center; }
+.share-inner { max-width: 560px; margin: 0 auto; }
+.share-inner h2 { font-size: clamp(20px, 2.5vw, 28px); font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.2; }
+.share-inner h2 em { font-style: italic; color: var(--teal); }
+.share-inner p { font-size: 14px; color: var(--soft); line-height: 1.75; margin-bottom: 28px; }
+.share-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 4px;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  border: none;
+  cursor: pointer;
+}
+.share-btn:hover { opacity: 0.85; }
+.share-btn-primary { background: var(--gold); color: var(--navy); }
+.share-btn-ghost { background: transparent; color: var(--navy); border: 1px solid var(--rule); }
+
+/* ── FOOTER ── */
+.footer { background: var(--navy); padding: 40px; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-legal { font-size: 11px; color: rgba(240,236,227,0.22); }
+.footer-tagline { font-family: 'Fraunces', serif; font-size: 12px; font-style: italic; color: rgba(240,236,227,0.22); }
+
+@media (max-width: 600px) {
+  .ty-hero, .steps-section, .share-section { padding-left: 20px; padding-right: 20px; }
+  .nav-inner { padding: 0 20px; }
+  .footer { padding: 32px 20px; }
+  .step-row { grid-template-columns: 48px 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-name">Clinical AI Collective</span>
+      <span class="nav-brand-tag">Ethical AI for Allied Health</span>
+    </a>
+    <a href="index.html" class="nav-home">&larr; Back to home</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="ty-hero" aria-label="Confirmation">
+  <div class="check-circle" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><polyline points="4,12 9,17 20,7"/></svg>
+  </div>
+  <span class="ty-eyebrow">You are confirmed</span>
+  <h1 class="ty-headline">You are in.<br><em>Welcome to the Collective.</em></h1>
+  <p class="ty-sub">Your spot on the waitlist is confirmed and your first Clinical AI Brief Newsletter is on its way. Check your inbox — and your spam folder just in case — within the next few minutes.</p>
+</section>
+
+<!-- ── NEXT STEPS ── -->
+<section class="steps-section">
+  <div class="steps-inner">
+    <div class="steps-header">
+      <span class="steps-eyebrow">What happens next</span>
+      <h2>Three things to do <em>right now.</em></h2>
+    </div>
+    <div class="steps-list" role="list">
+      <div class="step-row" role="listitem">
+        <div class="step-num"><span class="step-num-text">1</span></div>
+        <div class="step-body">
+          <p class="step-title">Check your inbox for your first Clinical AI Brief</p>
+          <p class="step-desc">Your welcome email and first newsletter issue are on their way. If you do not see it within a few minutes, check your spam or promotions folder. Add <strong>hello@clinicalaicollective.com</strong> to your contacts to keep future issues out of spam.</p>
+        </div>
+      </div>
+      <div class="step-row" role="listitem">
+        <div class="step-num"><span class="step-num-text">2</span></div>
+        <div class="step-body">
+          <p class="step-title">Download your free Prompt Toolkit PDF</p>
+          <p class="step-desc">Your credential-specific prompt toolkit is included in the welcome email. It contains ready-to-use AI documentation prompts organized by your credential and practice setting — save it somewhere you can find it quickly.</p>
+        </div>
+      </div>
+      <div class="step-row" role="listitem">
+        <div class="step-num"><span class="step-num-text">3</span></div>
+        <div class="step-body">
+          <p class="step-title">Mark June 21 on your calendar — course enrollment opens</p>
+          <p class="step-desc">As a waitlist member, you will receive first access and early bird pricing when the <strong>AI Clinical Efficiency Accelerator</strong> opens for enrollment on June 21, 2026. Keep an eye on your inbox — that email is the one you do not want to miss.</p>
+        </div>
+      </div>
+      <div class="step-row" role="listitem">
+        <div class="step-num"><span class="step-num-text">4</span></div>
+        <div class="step-body">
+          <p class="step-title">Explore the site while you wait</p>
+          <p class="step-desc">Read the <a href="clinical_ai_collective_about.html">About page</a> to learn the full story behind the Clinical AI Collective, or browse the <a href="clinical_ai_collective_course.html">Courses page</a> for a preview of what launches June 21.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SHARE ── -->
+<section class="share-section">
+  <div class="share-inner">
+    <h2>Know a colleague who <em>needs this?</em></h2>
+    <p>Every allied health professional documenting clinical care is navigating AI right now — most of them without any guidance built for their credential. Send them here.</p>
+    <div class="share-buttons">
+      <a href="clinical_ai_collective_optin.html" class="share-btn share-btn-primary">Share the Waitlist Page</a>
+      <a href="clinical_ai_collective_newsletter.html" class="share-btn share-btn-ghost">View Newsletter Archive</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <p class="footer-legal">&copy; 2026 Clinical AI Collective. Founded by Regina Lemmon Bush, PhD, CCC-SLP. All rights reserved.</p>
+    <p class="footer-tagline">Ethical AI. Better Workflows. Exceptional Care.</p>
+  </div>
+</footer>
+
+</body>
+</html>
