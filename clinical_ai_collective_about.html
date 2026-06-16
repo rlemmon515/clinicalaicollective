@@ -711,7 +711,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
         </div>
       </div>
       <div class="story-content">
-        <div class="story-block">
+        <div class="story-block" data-dot="0">
           <h3>The parking lot</h3>
           <p>It was five o'clock. Her son's preschool was closing in minutes. Her husband was out of town. A home health report sat unfinished on the screen. There was no one available to help and no good answer to any of it.</p>
           <p>That was the moment Regina Lemmon Bush, PhD, CCC-SLP first turned to AI. Not because she was curious about technology. Because she was out of options.</p>
@@ -719,12 +719,15 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
             <p>"My first AI output was, by my own description, not good. But instead of giving up, I got curious."</p>
           </div>
         </div>
-        <div class="story-block">
-          <h3>Getting curious, <em>then going deep</em></h3>
+        <div class="story-block" data-dot="1">
+          <h3>Getting curious</h3>
           <p>The output was not good. The documentation did not reflect her clinical reasoning. It hallucinated details. It missed the specificity that skilled documentation requires. She knew that immediately, because she had 20 years of practice behind her to compare it against.</p>
+        </div>
+        <div class="story-block" data-dot="2">
+          <h3>Going deep</h3>
           <p>She could have stopped there. Most clinicians do. Instead, she studied. She completed certification courses in AI. She read peer-reviewed research on AI in healthcare. She tested, refined, and tested again, applying the same rigor to learning AI that she had applied to everything in her clinical career.</p>
         </div>
-        <div class="story-block">
+        <div class="story-block" data-dot="3">
           <h3>From parking lot panic <em>to the boardroom</em></h3>
           <p>The process worked. She developed an approach that produced high-quality, compliant, individualized clinical drafts in a fraction of the time. What started as a necessity became a methodology. What started as her own documentation crisis became a framework she could teach.</p>
           <p>That methodology took her from a home health parking lot to serving as a clinical voice on AI workflow strategy in healthcare boardrooms, advising organizations at the executive level on how to implement AI that actually reflects the standards, scope of practice, and documentation demands of the allied health workforce.</p>
@@ -732,7 +735,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
             <p>"No allied health professional should have to figure this out alone. That is exactly why the Clinical AI Collective exists."</p>
           </div>
         </div>
-        <div class="story-block">
+        <div class="story-block" data-dot="4">
           <h3>Why the Collective <em>had to exist</em></h3>
           <p>Regina identified a gap that no existing resource was filling. Every AI course she encountered was built for physicians, technologists, or generic knowledge workers. None of them understood CCC-SLP documentation standards. None of them reflected AOTA frameworks. None of them accounted for the home health clinician finishing notes in a car, or the school-based SLP who cannot risk a HIPAA error, or the COTA who was doing exactly the same work and facing exactly the same pressures but being left out of every resource that claimed to help.</p>
           <p>The Clinical AI Collective was built to close that gap. By someone who had sat with patients, written the notes, taught the courses, led the programs, and consulted in the boardrooms. Not by a content creator. Not by an AI enthusiast. By a clinician.</p>
@@ -987,6 +990,30 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
     </div>
   </div>
 </footer>
+
+<!-- ─── TIMELINE SCROLL TRACKER ─── -->
+<script>
+(function () {
+  const dots = document.querySelectorAll('.timeline-dot');
+  const blocks = document.querySelectorAll('.story-block[data-dot]');
+
+  function setActive(index) {
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        setActive(parseInt(entry.target.dataset.dot));
+      }
+    });
+  }, { rootMargin: '-15% 0px -75% 0px', threshold: 0 });
+
+  blocks.forEach(function (block) { observer.observe(block); });
+})();
+</script>
 
 </body>
 </html>
