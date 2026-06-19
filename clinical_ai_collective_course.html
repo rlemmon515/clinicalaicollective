@@ -270,16 +270,29 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
 .cert-left p { font-size: 15px; color: var(--soft); line-height: 1.75; margin-bottom: 14px; }
 .cert-disclaimer { background: var(--teal-pale); border: 1px solid rgba(10,122,106,0.15); border-radius: 6px; padding: 16px 18px; font-size: 13px; color: var(--teal); line-height: 1.65; }
 .cert-disclaimer strong { font-weight: 600; color: var(--navy); }
-.cert-card { background: var(--navy); border-radius: 10px; padding: 36px 32px; text-align: center; position: relative; overflow: hidden; }
-.cert-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--teal), var(--gold)); }
-.cert-card-logo { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; color: rgba(240,236,227,0.4); letter-spacing: 0.08em; margin-bottom: 20px; display: block; }
-.cert-card-title { font-family: 'Fraunces', serif; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(240,236,227,0.3); margin-bottom: 12px; display: block; }
-.cert-card-name { font-family: 'Fraunces', serif; font-size: 22px; font-style: italic; color: #F0ECE3; margin-bottom: 6px; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 14px; }
-.cert-card-course { font-size: 13px; font-weight: 600; color: rgba(240,236,227,0.65); margin: 14px 0 6px; }
-.cert-card-hours { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; color: var(--teal-light); line-height: 1; margin-bottom: 4px; }
-.cert-card-hours-label { font-size: 11px; color: rgba(240,236,227,0.3); letter-spacing: 0.05em; margin-bottom: 20px; }
-.cert-card-sig { font-family: 'Fraunces', serif; font-size: 14px; font-style: italic; color: rgba(240,236,227,0.4); border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px; }
-.cert-card-sig-name { font-size: 11px; color: rgba(240,236,227,0.25); margin-top: 4px; font-style: normal; letter-spacing: 0.04em; }
+.cert-card { background: var(--navy); border-radius: 10px; padding: 18px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 12px 48px rgba(0,0,0,0.35); }
+.cert-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--teal), var(--gold), var(--teal)); }
+.cert-card-inner { border: 1px solid rgba(201,146,42,0.3); border-radius: 6px; padding: 28px 22px; position: relative; }
+.cert-card-inner::after { content: ''; position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; border: 1px solid rgba(201,146,42,0.1); border-radius: 3px; pointer-events: none; }
+.cert-card-logo { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: rgba(240,236,227,0.8); letter-spacing: 0.06em; margin-bottom: 3px; display: block; }
+.cert-card-logo-sub { font-size: 8px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-light); opacity: 0.7; display: block; margin-bottom: 14px; }
+.cert-card-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(201,146,42,0.45), transparent); margin: 14px 0; }
+.cert-card-title { font-size: 9px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(240,236,227,0.3); margin-bottom: 10px; display: block; }
+.cert-card-presented { font-size: 10px; font-style: italic; color: rgba(240,236,227,0.3); margin-bottom: 5px; }
+.cert-card-name { font-family: 'Fraunces', serif; font-size: 21px; font-style: italic; color: #F0ECE3; margin-bottom: 12px; line-height: 1.2; }
+.cert-card-course-label { font-size: 8px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(240,236,227,0.25); display: block; margin-bottom: 5px; }
+.cert-card-course { font-size: 13px; font-weight: 600; color: rgba(240,236,227,0.7); margin-bottom: 14px; line-height: 1.3; }
+.cert-card-hours-row { display: flex; align-items: baseline; justify-content: center; gap: 8px; margin-bottom: 14px; }
+.cert-card-hours { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 700; color: var(--teal-light); line-height: 1; }
+.cert-card-hours-label { font-size: 11px; color: rgba(240,236,227,0.4); letter-spacing: 0.04em; }
+.cert-card-asha-text { font-size: 8.5px; color: rgba(240,236,227,0.32); line-height: 1.65; margin-bottom: 14px; font-style: italic; text-align: left; background: rgba(255,255,255,0.03); border-radius: 4px; padding: 10px 12px; border: 1px solid rgba(255,255,255,0.05); }
+.cert-card-date-row { margin-bottom: 14px; }
+.cert-card-date-label { font-size: 8px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(240,236,227,0.25); display: block; margin-bottom: 5px; }
+.cert-card-date-line { display: inline-block; width: 160px; border-bottom: 1px solid rgba(255,255,255,0.15); height: 16px; }
+.cert-card-sig-area { border-top: 1px solid rgba(201,146,42,0.2); padding-top: 14px; }
+.cert-card-sig { font-family: 'Fraunces', serif; font-size: 13px; font-style: italic; color: rgba(240,236,227,0.55); margin-bottom: 4px; white-space: nowrap; }
+.cert-card-sig-title { font-size: 9px; color: rgba(240,236,227,0.25); letter-spacing: 0.05em; }
+.cert-sample-note { font-size: 11px; color: var(--ghost); text-align: center; margin-top: 12px; font-style: italic; line-height: 1.5; }
 
 /* ─── BONUS ─── */
 .bonus-band { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -803,16 +816,32 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
       </div>
       <div class="cert-right">
         <div class="cert-card" aria-label="Sample certificate of completion">
-          <span class="cert-card-logo">Clinical AI Collective</span>
-          <span class="cert-card-title">Certificate of Completion</span>
-          <p class="cert-card-name">Your Name, Credential</p>
-          <p class="cert-card-course">AI Clinical Efficiency Accelerator</p>
-          <p class="cert-card-hours">10</p>
-          <p class="cert-card-hours-label">Professional Development Hours</p>
-          <p style="font-size:10px;color:rgba(240,236,227,0.18);margin-bottom:14px;font-style:italic;">This certificate neither awards ASHA CEUs nor verifies that ASHA CEUs have been awarded.</p>
-          <div class="cert-card-sig">Regina Lemmon Bush</div>
-          <div class="cert-card-sig-name">PhD, CCC-SLP &nbsp;&middot;&nbsp; Founder, Clinical AI Collective</div>
+          <div class="cert-card-inner">
+            <span class="cert-card-logo">Clinical AI Collective</span>
+            <span class="cert-card-logo-sub">Ethical AI for Allied Health</span>
+            <div class="cert-card-divider"></div>
+            <span class="cert-card-title">Certificate of Completion</span>
+            <p class="cert-card-presented">This certifies that</p>
+            <p class="cert-card-name">Your Name, Credential</p>
+            <span class="cert-card-course-label">has successfully completed</span>
+            <p class="cert-card-course">AI Clinical Efficiency Accelerator</p>
+            <div class="cert-card-hours-row">
+              <span class="cert-card-hours">10</span>
+              <span class="cert-card-hours-label">Professional Development Hours</span>
+            </div>
+            <div class="cert-card-asha-text">This certificate documents attendance for the ASHA certification maintenance professional development requirement. This form is provided for ASHA certificate holders to document professional development hours (PDHs), such as other organizations&rsquo; continuing and professional development activities.</div>
+            <div class="cert-card-date-row">
+              <span class="cert-card-date-label">Date of Completion</span>
+              <span class="cert-card-date-line"></span>
+            </div>
+            <div class="cert-card-divider"></div>
+            <div class="cert-card-sig-area">
+              <div class="cert-card-sig">Regina Lemmon Bush, PhD, CCC-SLP</div>
+              <div class="cert-card-sig-title">Founder, Clinical AI Collective</div>
+            </div>
+          </div>
         </div>
+        <p class="cert-sample-note">Sample of the Clinical AI Collective certificate of completion.</p>
       </div>
     </div>
   </div>
