@@ -496,9 +496,14 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
 }
 .second-form {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   max-width: 420px;
   margin: 0 auto 12px;
+}
+.second-form-name-row {
+  display: flex;
+  gap: 10px;
 }
 .second-form input {
   flex: 1;
@@ -510,6 +515,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
   background: var(--white);
   color: var(--ink);
   outline: none;
+  width: 100%;
 }
 .second-form input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(10,122,106,0.08); }
 .second-form input::placeholder { color: var(--ghost); }
@@ -888,6 +894,10 @@ h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; letter-spaci
         <input type="hidden" name="zc_gad"     id="zc_gad_2" value="">
         <input type="hidden" name="Lead Source" value="Newsletter Page — Bottom Form">
         <input type="hidden" name="returnURL"  value="https://clinicalaicollective.com/clinical_ai_collective_thankyou.html">
+        <div class="second-form-name-row">
+          <input type="text" name="First Name" placeholder="First name" required autocomplete="given-name" aria-label="First name">
+          <input type="text" name="Last Name" placeholder="Last name" required autocomplete="family-name" aria-label="Last name">
+        </div>
         <input type="email" name="Email" placeholder="Your email address" required autocomplete="email" aria-label="Email address">
         <button type="submit" class="btn-primary">Subscribe free</button>
       </form>
